@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>TheSecond</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+    <!-- 1. ตั้งชื่อเล่นให้ Servlet (ชื่ออะไรก็ได้) -->
+    <servlet-name>registerServlet</servlet-name>
+    <!-- 2. ระบุชื่อ Class พร้อม Package (สำคัญมาก) -->
+    <servlet-class>controllers.registerServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <!-- 3. ต้องชื่อเดียวกับที่ตั้งไว้ข้างบน -->
+    <servlet-name>registerServlet</servlet-name>
+    <!-- 4. URL ที่จะใช้เรียกใน Browser (ต้องมี / นำหน้า) -->
+    <url-pattern>/register</url-pattern>
+</servlet-mapping>
+
+  <servlet>
+    <!-- 1. ตั้งชื่อเล่นให้ Servlet (ชื่ออะไรก็ได้) -->
+    <servlet-name>updateUserServlet</servlet-name>
+    <!-- 2. ระบุชื่อ Class พร้อม Package (สำคัญมาก) -->
+    <servlet-class>controllers.updateUserServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <!-- 3. ต้องชื่อเดียวกับที่ตั้งไว้ข้างบน -->
+    <servlet-name>updateUserServlet</servlet-name>
+    <!-- 4. URL ที่จะใช้เรียกใน Browser (ต้องมี / นำหน้า) -->
+    <url-pattern>/updateUser</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+    <!-- 1. ตั้งชื่อเล่นให้ Servlet (ชื่ออะไรก็ได้) -->
+    <servlet-name>loginServlet</servlet-name>
+    <!-- 2. ระบุชื่อ Class พร้อม Package (สำคัญมาก) -->
+    <servlet-class>controllers.loginServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <!-- 3. ต้องชื่อเดียวกับที่ตั้งไว้ข้างบน -->
+    <servlet-name>loginServlet</servlet-name>
+    <!-- 4. URL ที่จะใช้เรียกใน Browser (ต้องมี / นำหน้า) -->
+    <url-pattern>/login</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+    <!-- 1. ตั้งชื่อเล่นให้ Servlet (ชื่ออะไรก็ได้) -->
+    <servlet-name>addRoomServlet</servlet-name>
+    <!-- 2. ระบุชื่อ Class พร้อม Package (สำคัญมาก) -->
+    <servlet-class>controllers.addRoomServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <!-- 3. ต้องชื่อเดียวกับที่ตั้งไว้ข้างบน -->
+    <servlet-name>addRoomServlet</servlet-name>
+    <!-- 4. URL ที่จะใช้เรียกใน Browser (ต้องมี / นำหน้า) -->
+    <url-pattern>/addRoom</url-pattern>
+</servlet-mapping>
+
+
+ <servlet>
+    <!-- 1. ตั้งชื่อเล่นให้ Servlet (ชื่ออะไรก็ได้) -->
+    <servlet-name>updateRoomServlet</servlet-name>
+    <!-- 2. ระบุชื่อ Class พร้อม Package (สำคัญมาก) -->
+    <servlet-class>controllers.updateRoomServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <!-- 3. ต้องชื่อเดียวกับที่ตั้งไว้ข้างบน -->
+    <servlet-name>updateRoomServlet</servlet-name>
+    <!-- 4. URL ที่จะใช้เรียกใน Browser (ต้องมี / นำหน้า) -->
+    <url-pattern>/updateRoom</url-pattern>
+</servlet-mapping>
+
+ <servlet>
+    <!-- 1. ตั้งชื่อเล่นให้ Servlet (ชื่ออะไรก็ได้) -->
+    <servlet-name>addBookingServlet</servlet-name>
+    <!-- 2. ระบุชื่อ Class พร้อม Package (สำคัญมาก) -->
+    <servlet-class>controllers.addBookingServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <!-- 3. ต้องชื่อเดียวกับที่ตั้งไว้ข้างบน -->
+    <servlet-name>addBookingServlet</servlet-name>
+    <!-- 4. URL ที่จะใช้เรียกใน Browser (ต้องมี / นำหน้า) -->
+    <url-pattern>/addBooking</url-pattern>
+</servlet-mapping>
+
+</web-app>
