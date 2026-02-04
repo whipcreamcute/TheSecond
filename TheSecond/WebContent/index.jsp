@@ -1,14 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>	
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <!doctype html>
 <html lang="en">
-<!--begin::Head-->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Home | The Second</title>
-<!--begin::Accessibility Meta Tags-->
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, user-scalable=yes" />
 <meta name="color-scheme" content="light dark" />
@@ -97,7 +92,7 @@
  	out.print("<span class=\"d-none d-md-inline\">" + fullName + "</span>");
  }
  %>
-					</a>
+</a>
 						<ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
 							<!--begin::User Image-->
 							<li class="user-header text-bg-primary"><img
@@ -122,135 +117,234 @@
 			</div>
 			<!--end::Container-->
 		</nav>
-		<!--end::Header-->
-		<!--begin::Sidebar-->
-		<aside class="app-sidebar bg-body-secondary shadow"
-			data-bs-theme="dark">
-			<!--begin::Sidebar Brand-->
-			<div class="sidebar-brand">
-				<!--begin::Brand Link-->
-				<a href="../index.html" class="brand-link"> <!--begin::Brand Image-->
-					<img src="../assets/img/AdminLTELogo.png" alt="Logo"
-					class="brand-image opacity-75 shadow" /> <!--end::Brand Image--> <!--begin::Brand Text-->
-					<span class="brand-text fw-light">The 2ND</span> <!--end::Brand Text-->
-				</a>
-				<!--end::Brand Link-->
-			</div>
-			<!--end::Sidebar Brand-->
-			<!--begin::Sidebar Wrapper-->
-			<div class="sidebar-wrapper">
-				<nav class="mt-2">
-					<!--begin::Sidebar Menu-->
-					<ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview"
-						role="navigation" aria-label="Main navigation"
-						data-accordion="false" id="navigation">
-						<li class="nav-item"><a href="../index.jsp"
-							class="nav-link active"> <i
-								class="nav-icon bi bi-speedometer"></i>
-								<p>Home</p>
-						</a></li>
 
-						<li class="nav-item"><a href="../bookings.jsp"
-							class="nav-link"> <i class="nav-icon bi bi-book"></i>
-								<p>Bookings</p>
-						</a></li>
 
-						<c:if test="${userRole == 'admin'}">
-							<li class="nav-item"><a href="#" class="nav-link"> <i
-									class="nav-icon bi bi-box-seam-fill"></i>
-									<p>
-										Master Data <i class="nav-arrow bi bi-chevron-right"></i>
-									</p>
-							</a>
-								<ul class="nav nav-treeview">
-									<li class="nav-item"><a href="../rooms.jsp"
-										class="nav-link"> <i class="nav-icon bi bi-circle"></i>
-											<p>Rooms</p>
-									</a></li>
-									<li class="nav-item"><a href="../users.jsp"
-										class="nav-link"> <i class="nav-icon bi bi-circle"></i>
-											<p>Users</p>
-									</a></li>
-								</ul></li>
-						</c:if>
-					</ul>
-					<!--end::Sidebar Menu-->
-				</nav>
-			</div>
-			<!--end::Sidebar Wrapper-->
-		</aside>
-		<!--end::Sidebar-->
-		<!--begin::App Main-->
-		<main class="app-main">
-			<!--begin::App Content Header-->
-			<div class="app-content-header">
-				<!--begin::Container-->
-				<div class="container-fluid">
-					<!--begin::Row-->
-					<div class="row">
-						<div class="col-sm-6">
-							<h3 class="mb-0">Home</h3>
-						</div>
-						<!--div class="col-sm-6">
-                <ol class="breadcrumb float-sm-end">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                </ol>
-              </div-->
-					</div>
-					<!--end::Row-->
-				</div>
-				<!--end::Container-->
-			</div>
-			<!--end::App Content Header-->
-			<!--begin::App Content-->
-			<div class="app-content">
-				<!--begin::Container-->
-				<div class="container-fluid">
-					<!--begin::Row-->
-					<div class="row">
-						<div class="col-12">
-							<!-- Default box -->
-							<div class="card">
-								<div class="card-header">
-									<h3 class="card-title">Welcome</h3>
-								</div>
-								<div class="card-body">Content Here</div>
-								<!-- /.card-body -->
-								<div class="card-footer">
-									<a href="../create_booking.jsp"
-										class="btn btn-button btn-primary"><i
-										class="bi bi-plus-square"></i> Book Now</a>
-								</div>
-								<!-- /.card-footer-->
-							</div>
-							<!-- /.card -->
-						</div>
-					</div>
-					<!--end::Row-->
-				</div>
-				<!--end::Container-->
-			</div>
-			<!--end::App Content-->
-		</main>
-		<!--end::App Main-->
-		<!--begin::Footer-->
-		<footer class="app-footer">
-			<!--begin::To the end-->
-			<div class="float-end d-none d-sm-inline">Anything you want</div>
-			<!--end::To the end-->
-			<!--begin::Copyright-->
-			<strong> Copyright &copy; 2014-2025&nbsp; <a
-				href="https://adminlte.io" class="text-decoration-none">AdminLTE.io</a>.
-			</strong> All rights reserved.
-			<!--end::Copyright-->
-		</footer>
-		<!--end::Footer-->
-	</div>
-	<!--end::App Wrapper-->
-	<!--begin::Script-->
-	<!--begin::Third Party Plugin(OverlayScrollbars)-->
-	<script
+<style>
+/* =================================================
+   APPLE-LIKE / PREMIUM THEME (SAFE VERSION)
+================================================= */
+:root {
+  --primary: #0a84ff;
+  --text-main: #0f172a;
+  --text-sub: #64748b;
+  --glass-bg: rgba(255,255,255,.72);
+  --glass-border: rgba(0,0,0,.08);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+               "Source Sans 3", sans-serif;
+  background:
+    radial-gradient(circle at top right, #eaf2ff, transparent 45%),
+    linear-gradient(180deg, #f8fafc, #eef2f7);
+  color: var(--text-main);
+}
+
+/* ================= HEADER : WHITE GLASS ================= */
+.app-header.navbar {
+  background: rgba(255,255,255,0.88) !important;
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.app-header .nav-link,
+.app-header span,
+.app-header i {
+  color: #0f172a !important;
+}
+
+.app-header .nav-link:hover {
+  background: rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+
+/* ================= SIDEBAR ================= */
+.app-sidebar {
+  background: linear-gradient(180deg, #0f172a, #020617) !important;
+}
+
+.sidebar-brand {
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.sidebar-menu .nav-link {
+  border-radius: 12px;
+  margin: 6px 10px;
+  transition: all .3s ease;
+}
+
+.sidebar-menu .nav-link:hover {
+  background: rgba(255,255,255,.08);
+  transform: translateX(4px);
+}
+
+.sidebar-menu .nav-link.active {
+  background: linear-gradient(90deg, #0a84ff, #38bdf8);
+  box-shadow: 0 8px 20px rgba(10,132,255,.45);
+}
+
+/* ================= CONTENT HEADER ================= */
+.app-content-header {
+  position: relative;
+  padding: 40px 20px 80px;
+}
+
+.app-content-header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+}
+
+/* ===== WELCOME GLASS CARD ===== */
+.app-content-header h4 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 16px 26px;
+  border-radius: 20px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.12),
+    inset 0 1px 0 rgba(255,255,255,.6);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+/* ================= CARD ================= */
+.card {
+  border-radius: 24px;
+  border: none;
+  background: #fff;
+  box-shadow: 0 30px 60px rgba(0,0,0,.08);
+  transition: all .35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 80px rgba(0,0,0,.12);
+}
+
+.card img {
+  border-radius: 20px;
+  transition: transform .5s ease;
+}
+
+.card img:hover {
+  transform: scale(1.04);
+}
+
+/* ================= BUTTON ================= */
+.btn-primary {
+  background: linear-gradient(180deg, #0a84ff, #006edc);
+  border: none;
+  border-radius: 999px;
+  padding: 14px 38px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  box-shadow:
+    0 14px 30px rgba(10,132,255,.45),
+    inset 0 1px 0 rgba(255,255,255,.5);
+  transition: all .35s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 22px 45px rgba(10,132,255,.65),
+    inset 0 1px 0 rgba(255,255,255,.7);
+}
+
+/* ================= FOOTER ================= */
+.app-footer {
+  background: transparent;
+  color: var(--text-sub);
+}
+
+.app-footer a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .app-content-header h4 {
+    position: static;
+    margin-top: 16px;
+    width: fit-content;
+  }
+}
+</style>
+</head>
+
+
+<aside class="app-sidebar shadow" data-bs-theme="dark">
+<div class="sidebar-brand">
+<a href="../index.jsp" class="brand-link">
+<img src="../assets/img/meow/logo4.png" class="brand-image" />
+<span class="brand-text">The Second</span>
+</a>
+</div>
+
+<div class="sidebar-wrapper">
+<ul class="nav sidebar-menu flex-column">
+<li class="nav-item">
+<a href="../index.jsp" class="nav-link active">
+<i class="nav-icon bi bi-speedometer"></i> <p>Home</p>
+</a>
+</li>
+
+<li class="nav-item">
+<a href="../bookings.jsp" class="nav-link">
+<i class="nav-icon bi bi-book"></i> <p>Bookings</p>
+</a>
+</li>
+
+<c:if test="${userRole == 'admin'}">
+<li class="nav-item">
+<a href="#" class="nav-link">
+<i class="nav-icon bi bi-box-seam-fill"></i>
+<p>Master Data</p>
+</a>
+<ul class="nav nav-treeview">
+<li class="nav-item"><a href="../rooms.jsp" class="nav-link">Rooms</a></li>
+<li class="nav-item"><a href="../users.jsp" class="nav-link">Users</a></li>
+</ul>
+</li>
+</c:if>
+</ul>
+</div>
+</aside>
+
+<main class="app-main">
+<div class="app-content-header container-fluid">
+<h3>Home</h3>
+</div>
+
+<div class="container-fluid">
+<div class="card">
+<div class="card-body text-center">
+<img src="../assets/img/meow/room1.jpg" class="img-fluid mb-4" />
+<br>
+<a href="../create_booking.jsp" class="btn btn-primary">Book Now</a>
+</div>
+</div>
+</div>
+</main>
+
+<footer class="app-footer text-center">
+<a href="https://line.me/ti/g/56m9CJab_R">Contact us</a>
+</footer>
+
+</div>
+
+<script
 		src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js"
 		crossorigin="anonymous"></script>
 	<!--end::Third Party Plugin(OverlayScrollbars)-->

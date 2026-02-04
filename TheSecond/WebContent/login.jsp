@@ -55,12 +55,25 @@
     <div class="login-box">
       <div class="card card-outline card-primary">
         <div class="card-header">
-          <a
-            href="../"
-            class="link-dark text-center link-offset-2 link-opacity-100 link-opacity-50-hover"
-          >
-            <h1 class="mb-0"><b>The</b>Second</h1>
-          </a>
+         
+        
+  <style>
+  
+  .card-header h1.mb-0::before {
+    content: "";
+    display: block;
+    width: 300px; /* ปรับขนาดความกว้างโลโก้ */
+    height: 160px; /* ปรับขนาดความสูงโลโก้ */
+    margin: 0 auto 0px; /* จัดกึ่งกลางและเว้นระยะห่างด้านล่าง */
+    background-image: url('../assets/img/meow/logo1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+</style>           
+            <h1 class="mb-0"></h1>          
+   
         </div>
         <div class="card-body login-card-body">
           <p class="login-box-msg">Sign in to start your session</p>
@@ -80,20 +93,20 @@
               <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
             </div>
             <!--begin::Row-->
-            <div class="row">
-              <!-- /.col -->
-              <div class="col-4">
-                <div class="d-grid gap-2">
-                  <button type="submit" class="btn btn-primary">Sign In</button>
-                </div>
-              </div>
-              <!-- /.col -->
-            </div>
+            <br>
+           <div class="row justify-content-center"> <div class="col-4"> <div class="d-grid gap-2">
+      <button type="submit" class="btn btn-primary">Sign In</button>
+    </div>
+  </div>
+</div>
             <!--end::Row-->
           </form>
           <!-- /.social-auth-links -->
+         
           <p class="mb-0">
-            <a href="../register.jsp" class="text-center"> Register a new membership </a>
+          <br>
+            <a href="../register.jsp" class="text-decoration-none"> Register a new membership </a>
+            
           </p>
         </div>
         <!-- /.login-card-body -->
@@ -127,7 +140,7 @@
       };
       document.addEventListener('DOMContentLoaded', function () {
         const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
-        if (sidebarWrapper && OverlayScrollbarsGlobal?.OverlayScrollbars !== undefined) {
+        if (sidebarWrapper && OverlayScrollbarsGlobal.OverlayScrollbars !== undefined) {
           OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
             scrollbars: {
               theme: Default.scrollbarTheme,

@@ -65,12 +65,24 @@
       <!-- /.register-logo -->
       <div class="card card-outline card-primary">
         <div class="card-header">
-          <a
-            href="../index2.html"
-            class="link-dark text-center link-offset-2 link-opacity-100 link-opacity-50-hover"
-          >
-            <h1 class="mb-0"><b>The</b>Second</h1>
-          </a>
+        
+                 <style>
+  .card-header h1.mb-0::before {
+    content: "";
+    display: block;
+    width: 300px; /* ปรับขนาดความกว้างโลโก้ */
+    height: 160px; /* ปรับขนาดความสูงโลโก้ */
+    margin: 0 auto 0px; /* จัดกึ่งกลางและเว้นระยะห่างด้านล่าง */
+    background-image: url('../assets/img/meow/logo1.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  
+</style> 
+            <h1 class="mb-0"></h1>
+     
         </div>
         <div class="card-body register-card-body">
           <p class="register-box-msg">Register a new membership</p>
@@ -104,7 +116,8 @@
               <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
             </div>
             <!--begin::Row-->
-            <div class="row">
+            <br>
+            <div class="row justify-content-center">
               <!-- /.col -->
               <div class="col-4">
                 <div class="d-grid gap-2">
@@ -114,9 +127,10 @@
               <!-- /.col -->
             </div>
             <!--end::Row-->
+            <br>
           </form>
           <p class="mb-0">
-            <a href="../login.jsp" class="link-primary text-center"> I already have a membership </a>
+            <a href="../login.jsp" class="text-decoration-none"> I already have a membership </a>
           </p>
         </div>
         <!-- /.register-card-body -->
