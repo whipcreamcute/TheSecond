@@ -307,20 +307,29 @@ body {
 </li>
 
 <c:if test="${userRole == 'admin'}">
-<li class="nav-item">
-<a href="#" class="nav-link">
-<i class="nav-icon bi bi-box-seam-fill"></i>
-<p>Master Data</p>
-</a>
-<ul class="nav nav-treeview">
-<li class="nav-item"><a href="../rooms.jsp" class="nav-link">Rooms</a></li>
-<li class="nav-item"><a href="../users.jsp" class="nav-link">Users</a></li>
-</ul>
-</li>
-</c:if>
-</ul>
-</div>
-</aside>
+							<li class="nav-item"><a href="#" class="nav-link"> <i
+									class="nav-icon bi bi-box-seam-fill"></i>
+									<p>
+										Master Data <i class="nav-arrow bi bi-chevron-right"></i>
+									</p>
+							</a>
+								<ul class="nav nav-treeview">
+									<li class="nav-item"><a href="../rooms.jsp"
+										class="nav-link"> <i class="nav-icon bi bi-circle"></i>
+											<p>Rooms</p>
+									</a></li>
+									<li class="nav-item"><a href="../users.jsp"
+										class="nav-link"> <i class="nav-icon bi bi-circle"></i>
+											<p>Users</p>
+									</a></li>
+								</ul></li>
+						</c:if>
+					</ul>
+					<!--end::Sidebar Menu-->
+				</nav>
+			</div>
+			<!--end::Sidebar Wrapper-->
+		</aside>
 
 <main class="app-main">
 <div class="app-content-header container-fluid">
