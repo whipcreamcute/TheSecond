@@ -293,20 +293,23 @@ body {
 </div>
 
 <div class="sidebar-wrapper">
-<ul class="nav sidebar-menu flex-column">
-<li class="nav-item">
-<a href="../index.jsp" class="nav-link active">
-<i class="nav-icon bi bi-speedometer"></i> <p>Home</p>
-</a>
-</li>
+				<nav class="mt-2">
+					<!--begin::Sidebar Menu-->
+					<ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview"
+						role="navigation" aria-label="Main navigation"
+						data-accordion="false" id="navigation">
+						<li class="nav-item"><a href="../index.jsp"
+							class="nav-link active"> <i
+								class="nav-icon bi bi-speedometer"></i>
+								<p>Home</p>
+						</a></li>
 
-<li class="nav-item">
-<a href="../bookings.jsp" class="nav-link">
-<i class="nav-icon bi bi-book"></i> <p>Bookings</p>
-</a>
-</li>
+						<li class="nav-item"><a href="../bookings.jsp"
+							class="nav-link"> <i class="nav-icon bi bi-book"></i>
+								<p>Bookings</p>
+						</a></li>
 
-<c:if test="${userRole == 'admin'}">
+						<c:if test="${userRole == 'admin'}">
 							<li class="nav-item"><a href="#" class="nav-link"> <i
 									class="nav-icon bi bi-box-seam-fill"></i>
 									<p>
@@ -330,6 +333,8 @@ body {
 			</div>
 			<!--end::Sidebar Wrapper-->
 		</aside>
+		<!--end::Sidebar-->
+		<!--begin::App Main-->
 
 <main class="app-main">
 <div class="app-content-header container-fluid">
